@@ -1,0 +1,61 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Carousel } from "@/components/ui/carousel";
+import { Video } from "lucide-react";
+
+export default function SportSite() {
+  return (
+    <div className="p-4 space-y-8">
+      <header className="text-center space-y-2">
+        <h1 className="text-4xl font-bold text-blue-700">СПОРТ.UA</h1>
+        <p className="text-lg text-gray-600">Усе про спорт для кожного — цікаво, яскраво, доступно!</p>
+      </header>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Галерея спорту</h2>
+        <Carousel className="w-full h-64 rounded-xl overflow-hidden">
+          <img src="https://source.unsplash.com/featured/?sports" alt="sport1" className="w-full h-full object-cover" />
+          <img src="https://source.unsplash.com/featured/?soccer" alt="sport2" className="w-full h-full object-cover" />
+          <img src="https://source.unsplash.com/featured/?basketball" alt="sport3" className="w-full h-full object-cover" />
+        </Carousel>
+      </section>
+
+      <section className="grid md:grid-cols-2 gap-6">
+        <Card>
+          <CardContent className="p-4">
+            <h3 className="text-xl font-bold mb-2">Новини зі світу спорту</h3>
+            <p>Українські спортсмени вибороли 5 медалей на чемпіонаті Європи! Дізнайся більше про їхній шлях до перемоги.</p>
+            <Button className="mt-2">Читати більше</Button>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-4">
+            <h3 className="text-xl font-bold mb-2">Поради для тренувань</h3>
+            <p>Як почати тренуватись без тренажерного залу? Простий гайд для всіх вікових груп!</p>
+            <Button className="mt-2">Переглянути</Button>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Відео дня</h2>
+        <div className="aspect-video w-full rounded-xl overflow-hidden shadow">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/k3fH1iI1HkE"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
+
+      <footer className="text-center text-gray-500 text-sm pt-8">
+        &copy; 2025 СПОРТ.UA — Всі права захищені.
+      </footer>
+    </div>
+  );
+}
